@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contoh jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  </head>
+  <body>
+    <div id="hidden">
+      <p style="
+        background-color: blueviolet; 
+        color: antiquewhite; 
+        padding: 10px 10px 10px 10px;"
+      >
+        Raffi Ahmad
+      </p>
+    </div>
+    <button id="btn-hidden" class="hidden">Sembunyikan Nama</button>
+    <br>
+    <button id="btn-show" class="show">Tampilkan Nama</button>
+  </body>
+    <script>
+      $(document).ready(function () {
+        $(".hidden").click(function () {
+          $("#hidden").hide(1000);
+        });
+        $(".show").click(function () {
+          $("#hidden").show(1000);
+        });
+      });
+    </script>
+</html>

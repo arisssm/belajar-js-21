@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contoh jQuery Ajax</title>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    </head>
+    <body>
+        <div id="dataUser" style="color: blue;"></div>
+
+    <script>
+        $(document).ready(function () {
+            $("#ambilData").click(function () {
+                $.ajax({
+                url: "https://jsonplaceholder.typicode.com/todos/1",
+                type: "GET",
+                dataType: "json",
+                    success: function (data) {
+                        $("#dataUser").html
+                        (
+                            "<p> User ID: "+ data.userId + 
+                                " <br>Title: " + data.title + 
+                            "</p>"
+                        );
+                    }
+                });
+            });
+        });
+    </script>
+
+    <button id="ambilData">Ambil Data Online</button>
+    </body>
+</html>

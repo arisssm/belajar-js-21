@@ -1,0 +1,14 @@
+
+{
+    "nama": "Pakades",
+    "umur": 30,
+    "alamat": {
+        "jalan": "Jl. Kelurahan",
+        "kota": "Kota Jakarta",
+        "kodePos": "12345"
+    },
+    "hobi": ["bergulat", "berlari", "memanjat"]
+}
+
+
+

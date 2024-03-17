@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Belajar Javascript</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="output">
+      
+    </div>
+  </body>
+  <script>
+    let jenisBarang = "Laptop";
+    let merek = "Asus";
+    let kategori;
+    let output = '..';
+
+    switch (jenisBarang) {
+      case "Laptop":
+        switch (merek) {
+          case "Dell":
+            kategori = "Laptop Dell, termasuk dalam kategori Elektronik";
+            break;
+          case "HP":
+            kategori = "Laptop HP, termasuk dalam kategori Elektronik";
+            break;
+          case "Asus":
+            kategori = "Laptop Asus, termasuk dalam kategori Elektronik";
+            break;
+          default:
+            kategori = "Merek laptop tidak valid";
+        }
+        break;
+      case "Pakaian":
+        switch (merek) {
+          case "Nike":
+            kategori = "Pakaian merek Nike, termasuk dalam kategori Fashion";
+            break;
+          case "Adidas":
+            kategori = "Pakaian merek Adidas, termasuk dalam kategori Fashion";
+            break;
+          case "Zara":
+            kategori = "Pakaian merek Zara, termasuk dalam kategori Fashion";
+            break;
+          default:
+            kategori = "Merek pakaian tidak valid";
+        }
+        break;
+      case "Alat Rumah Tangga":
+        switch (merek) {
+          case "Sharp":
+            kategori =
+              "Alat rumah tangga merek Sharp, termasuk dalam kategori Rumah Tangga";
+            break;
+          case "Philips":
+            kategori =
+              "Alat rumah tangga merek Philips, termasuk dalam kategori Rumah Tangga";
+            break;
+          case "Panasonic":
+            kategori =
+              "Alat rumah tangga merek Panasonic, termasuk dalam kategori Rumah Tangga";
+            break;
+          default:
+            kategori = "Merek alat rumah tangga tidak valid";
+        }
+        break;
+      default:
+        kategori = "Jenis barang tidak valid";
+    }
+
+    console.log(
+      `Barang dengan jenis ${jenisBarang} dan merek ${merek}, ${kategori}`
+    );
+    // Menampilkan output di dalam elemen dengan id "output"
+    document.getElementById("output").innerHTML = 
+    `Barang dengan jenis 
+      <h5 class="fw-bold"> ${jenisBarang} </h5> 
+      dan merek
+    <h3> ${merek} </h3> ${kategori}`;
+  </script>
+</html>

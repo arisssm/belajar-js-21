@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+    <style>
+        .input {
+            padding: 10px 10px 10px 10px;
+        }
+        p {
+            padding: 10px 10px 10px 10px;
+            border: 2px solid;
+        }
+    </style>
+</head>
+<body>
+
+    <input class="input" type="text" id="inputTeks" placeholder="Ketik sesuatu...">
+    <h3>Output:</h3>
+    <p id="hasil"></p>
+
+    <script>
+        // Menggunakan let untuk mendeklarasikan variabel
+        let inputElemen = document.getElementById("inputTeks");
+        let hasilElemen = document.getElementById("hasil");
+
+        // Menambahkan event listener untuk event input
+        inputElemen.addEventListener("input", function() {
+            // Menggunakan let untuk deklarasi variabel lokal
+            let nilaiInput = inputElemen.value;
+            hasilElemen.textContent = "Anda mengetik: " + nilaiInput;
+        });
+    </script>
+
+</body>
+</html>
+
+

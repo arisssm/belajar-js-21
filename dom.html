@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh DOM</title>
+</head>
+<body>
+
+    <h1>Daftar Buah</h1>
+    <ul id="daftarBuah">
+        <li>Apel</li>
+        <li>Jeruk</li>
+        <li>Pisang</li>
+    </ul>
+    <button onclick="tambahBuah()">Tambah Buah</button>
+
+    <script>
+        function tambahBuah() {
+            // Mendapatkan elemen ul dengan id 'daftarBuah'
+            let daftar = document.getElementById('daftarBuah');
+
+            // Membuat elemen li baru
+            let buahBaru = document.createElement('li');
+            buahBaru.textContent = 'Anggur'; // Mengatur teks pada elemen li
+
+            // Menambahkan elemen li baru ke dalam elemen ul
+            daftar.appendChild(buahBaru);
+        }
+    </script>
+
+</body>
+</html>
